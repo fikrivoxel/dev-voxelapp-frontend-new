@@ -1,12 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, {Fragment} from 'react'
+import {render} from 'react-dom'
+import configStore from 'configStore'
+import Root from 'components/Root'
+import * as serviceWorker from './serviceWorker'
+import 'styles/app.scss'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = configStore.configureStore()
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+render(
+  <Fragment>
+    <Root store={store} history={configStore.history} />
+  </Fragment>
+  , document.getElementById('root')
+)
+
+serviceWorker.unregister()
