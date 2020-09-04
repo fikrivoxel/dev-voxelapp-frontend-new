@@ -9,7 +9,7 @@
     "connected-react-router": "^6.5.2",
     "history": "^4.9.0",
     "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react": "^16.9.0",
     "react-animate-height": "^2.0.15",
     "react-cookie": "^4.0.1",
